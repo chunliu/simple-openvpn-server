@@ -26,7 +26,7 @@
     "imagePublisher": "Canonical",
     "imageOffer": "UbuntuServer",
     "OSDiskName": "openvpn-vhd",
-    "imageSKU": "16.04.0-LTS",
+    "imageSKU": "18.04-LTS",
     "nicName": "openvpnNic",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "openvpnSubnet",
@@ -175,7 +175,7 @@
 			"typeHandlerVersion": "2.0",
 			"autoUpgradeMinorVersion": true,
 			"settings": {
-				"fileUris": "[split('https://raw.githubusercontent.com/theonemule/simple-openvpn-server/master/openvpn.sh', ' ')]",
+				"fileUris": "[split('https://raw.githubusercontent.com/chunliu/simple-openvpn-server/master/openvpn.sh', ' ')]",
 				"commandToExecute": "[concat('bash openvpn.sh --host=', parameters('dnsNameForPublicIP'), '.', resourceGroup().location, '.cloudapp.azure.com --adminpassword=', parameters('adminPassword'))]"
 			}
 		}
